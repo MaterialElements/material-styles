@@ -1,0 +1,36 @@
+<link rel="import" href="../polymer/polymer-element.html">
+
+<dom-module id="material-styles">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <h2>Hello [[prop1]]!</h2>
+  </template>
+
+  <script>
+    /**
+     * `material-styles`
+     * Shared styles for Material Design elements
+     *
+     * @customElement
+     * @polymer
+     * @demo demo/index.html
+     */
+    class MaterialStyles extends Polymer.Element {
+      static get is() { return 'material-styles'; }
+      static get properties() {
+        return {
+          prop1: {
+            type: String,
+            value: 'material-styles'
+          }
+        };
+      }
+    }
+
+    window.customElements.define(MaterialStyles.is, MaterialStyles);
+  </script>
+</dom-module>
